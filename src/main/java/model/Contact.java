@@ -1,21 +1,28 @@
 package model;
 
+import java.util.List;
+
 public class Contact {
     private long id;
     private String firstName;
     private String lastName;
     private String company;
     private String jobTitle;
+    List<EmailContact> emailContacts;
+    List<PhoneContact> phoneContacts;
 
     public Contact() {
     }
 
-    public Contact(long id, String firstName, String lastName, String company, String jobTitle) {
+    public Contact(long id, String firstName, String lastName, String company, String jobTitle,
+                   List<EmailContact> emailContacts,  List<PhoneContact> phoneContacts) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.company = company;
         this.jobTitle = jobTitle;
+        this.emailContacts = emailContacts;
+        this.phoneContacts = phoneContacts;
     }
 
 
@@ -57,5 +64,21 @@ public class Contact {
 
     public void setJobTitle(String jobTitle) {
         this.jobTitle = jobTitle;
+    }
+
+    public List<EmailContact> getEmailContacts() {
+        return emailContacts;
+    }
+
+    public void setEmailContacts(List<EmailContact> emailContacts) {
+        this.emailContacts = emailContacts;
+    }
+
+    public List<PhoneContact> getPhoneContacts() {
+        return phoneContacts;
+    }
+
+    public void setPhoneContacts(List<PhoneContact> phoneContacts) {
+        this.phoneContacts = phoneContacts;
     }
 }
