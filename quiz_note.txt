@@ -1,0 +1,10 @@
+The Enities
+
+Contact
+EmailContact
+PhoneContact
+
+Contact can have many EmailContact and many PhoneContact
+
+User must be able to search a contact
+User must be able to add a new contact, update and delete a contact
